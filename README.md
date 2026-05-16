@@ -60,3 +60,10 @@ stop-sign-classifier/
 │
 ├── requirements.txt
 └── README.md
+```
+
+## 📚 Acknowledgements
+
+This project was developed using concepts and guidance from the  course **Introduction to Computer Vision and Image Processing by IBM (Coursera)**, which provided foundational knowledge on convolutional neural networks, image preprocessing, and model training workflows.
+
+Some parts of the implementation and experimental structure are inspired by the course material.
