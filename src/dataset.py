@@ -10,7 +10,7 @@ import shutil
 import random
 
 class DatasetCreator:
-    def __init__(self, output_dir="./dataset", train_ratio=0.9, n_classes=2, gray=False):
+    def __init__(self, output_dir, train_ratio=0.9, n_classes=2, gray=False):
         self.source_dir     = ""
         self.output_dir     = output_dir
         self.train_ratio    = train_ratio
@@ -110,7 +110,7 @@ class DatasetCreator:
             train_transform.transforms.insert(1, transforms.Grayscale(num_output_channels=1))
             val_transform.transforms.insert(1, transforms.Grayscale(num_output_channels=1))
 
-        train_dataset = ImageFolder("./dataset/train", transform=train_transform)
-        val_dataset = ImageFolder("./dataset/val", transform=val_transform)
+        train_dataset = ImageFolder(self.output_dir+'/train', transform=train_transform)
+        val_dataset = ImageFolder(self.output_dir+'/val', transform=val_transform)
 
         return train_dataset, val_dataset

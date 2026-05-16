@@ -111,9 +111,9 @@ class CNN_ResNet18(nn.Module):
             self.train_transform.transforms.insert(1, transforms.Grayscale(num_output_channels=3))
             self.val_transform.transforms.insert(1, transforms.Grayscale(num_output_channels=3))
 
-    def create_dataset(self, root, train_ratio=0.9):
+    def create_dataset(self, root, output_dir, train_ratio=0.9):
         # Create instance
-        dataset = DatasetCreator(train_ratio=train_ratio)
+        dataset = DatasetCreator(output_dir=output_dir, train_ratio=train_ratio)
         # Create dataset
         self.train_dataset, self.val_dataset = dataset.create_dataset(root, self.train_transform, self.val_transform)
         # Update N classes and output layer
