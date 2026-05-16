@@ -1,8 +1,8 @@
 # 🚦 Stop Sign Classifier with CNN
 
 A deep learning project for binary image classification: detecting whether an image contains a **STOP sign** or not using a Convolutional Neural Network (CNN) based on ResNet18.
-Please open the notebook **traffic-signal-classifier.ipynb** as there is a step-by-step explanation of the project.
 ---
+Please open the notebook **traffic-signal-classifier.ipynb** as there is a step-by-step explanation of the project.
 
 ## 📌 Overview
 
